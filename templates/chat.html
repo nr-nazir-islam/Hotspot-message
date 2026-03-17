@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat - {{ room }}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='chat.css') }}">
+
+    <!-- Socket.IO -->
+    <script src="/static/socket.io.js"></script>
+</head>
+
+<body>
+
+<div class="page">
+
+    <div class="chat">
+
+        <!-- ===== HEADER ===== -->
+        <div class="user-bar">
+            <div class="avatar" id="myAvatar">
+                {{ username[0]|upper }}
+            </div>
+
+            <div class="name">
+                {{ room }}
+            </div>
+        </div>
+
+        <!-- ===== CHAT AREA ===== -->
+        <div class="conversation">
+            <div id="messages" class="conversation-container"></div>
+        </div>
+
+        <!-- ===== INPUT BOX ===== -->
+        <div class="conversation-compose">
+
+            <input
+                id="messageInput"
+                type="text"
+                placeholder="Type a message..."
+                autocomplete="off"
+            >
+
+            <button onclick="sendMessage()">➤</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= JS ================= -->
+<script>
+
+const socket = io();
+
+const username = "{{ username }}";
+const room = "{{ room }}";
+
+const messagesDiv = document.getElementById("messages");
+const input = document.getElementById("messageInput");
+
+
+/* ===== JOIN ROOM ===== */
+socket.emit("join", {
+    username: username,
+    room: room
+});
+
+
+/* ===== RECEIVE MESSAGE ===== */
+socket.on("message", function(data){
+
+    const messageDiv = document.createElement("div");
+
+    let type = (data.username === username) ? "sent" : "received";
+
+    if(data.username === "System"){
+        messageDiv.className = "system";
+        messageDiv.innerText = data.message;
+        messagesDiv.appendChild(messageDiv);
+        scrollBottom();
+        return;
+    }
+
+    messageDiv.className = "message " + type;
+
+    const avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.innerText = data.username.charAt(0).toUpperCase();
+
+    const text = document.createElement("div");
+    text.className = "msg-text";
+    text.innerHTML =
+        "<b>" + data.username + "</b><br>" + data.message;
+
+    messageDiv.appendChild(avatar);
+    messageDiv.appendChild(text);
+
+    messagesDiv.appendChild(messageDiv);
+
+    scrollBottom();
+});
+
+
+/* ===== SEND MESSAGE ===== */
+function sendMessage(){
+
+    const msg = input.value.trim();
+    if(msg === "") return;
+
+    socket.emit("message", {
+        username: username,
+        room: room,
+        message: msg
+    });
+
+    input.value = "";
+}
+
+
+/* ===== ENTER KEY SEND ===== */
+input.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        sendMessage();
+    }
+});
+
+
+/* ===== AUTO SCROLL ===== */
+function scrollBottom(){
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+}
+
+</script>
+
+</body>
+</html>

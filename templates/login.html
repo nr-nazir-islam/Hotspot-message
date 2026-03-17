@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Messenger</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='login.css') }}">
+</head>
+
+<body>
+
+<div class="background-effects">
+    <div class="glow-orb glow-orb-1"></div>
+    <div class="glow-orb glow-orb-2"></div>
+    <div class="glow-orb glow-orb-3"></div>
+</div>
+
+<div class="login-container">
+<div class="login-card">
+
+<div class="login-header">
+    <div class="logo-icon">💬</div>
+    <h2>Messenger</h2>
+    <p>Enter chat room</p>
+</div>
+
+<form method="POST">
+
+<div class="form-group">
+<div class="input-wrapper">
+    <input name="username" required>
+    <label>Your Name</label>
+    <span class="input-line"></span>
+</div>
+</div>
+
+<div class="form-group">
+<div class="input-wrapper">
+    <select name="room" required
+        style="width:100%;background:#1a1a25;border:1px solid #2a2a35;
+        padding:16px;color:white;border-radius:6px;">
+        {% for r in rooms %}
+        <option value="{{ r }}">{{ r }}</option>
+        {% endfor %}
+    </select>
+</div>
+</div>
+
+<button class="login-btn" type="submit">
+    <span class="btn-text">Enter Chat</span>
+    <span class="btn-loader"></span>
+    <span class="btn-glow"></span>
+</button>
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>
