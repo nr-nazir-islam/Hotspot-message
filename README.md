@@ -105,9 +105,9 @@ If you want to use MessengerProject **without internet**, via your phone's hotsp
 ```bash
 ip addr show wlan0
 # Look for "inet" under wlan0 (e.g., 192.168.43.101)
+
 ### About
----
-👨‍💻 Author
+- 👨‍💻 Author
 
 N R Nazir
 
