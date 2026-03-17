@@ -67,7 +67,7 @@ http://127.0.0.1:5000
 
 ⚠️ Notes
 
-- "chat.db" is auto-created if not present
+- "chat.db" is automatic-created if not present
 - Works best on local network / same device
 - For production, use proper hosting (Render / Railway)
 
