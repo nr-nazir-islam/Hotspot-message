@@ -37,6 +37,7 @@ pkg install python git
 2️⃣ Clone the repository
 
 git clone https://github.com/nr-nazir-islam/Hotspot-message.git
+---
 cd Hotspot-message
 ---
 
