@@ -62,22 +62,6 @@ http://127.0.0.1:5000
 
 ---
 
-📁 Project Structure
-
-MessengerProject/
-├── server.py
-├── database.py
-├── chat.db
-├── requirements.txt
-├── static/
-│   ├── chat.js
-│   ├── chat.css
-│   └── login.css
-└── templates/
-    ├── login.html
-    └── chat.html
-
----
 
 ⚠️ Notes
 
@@ -107,7 +91,7 @@ Feel free to fork and improve this project!
 
 👨‍💻 Author
 
-Nazir
+N R Nazir
 
 ---
 
