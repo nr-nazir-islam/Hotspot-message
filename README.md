@@ -26,10 +26,11 @@ Make sure you have:
 ---
 
 📱 Termux Installation (Step-by-Step)
-
+---
 1️⃣ Install required packages
 
 pkg update && pkg upgrade
+---
 pkg install python git
 
 ---
@@ -44,6 +45,7 @@ cd Hotspot-message
 3️⃣ Install Python dependencies
 
 pip install --upgrade pip
+---
 pip install -r requirements.txt
 
 ---
@@ -87,18 +89,6 @@ Change port in "server.py"
 
 Feel free to fork and improve this project!
 
----
-
-👨‍💻 Author
-
-N R Nazir
-
----
-
-⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
----
 
 ## 📡 Using Offline Hotspot (Local Network)
 
@@ -115,3 +105,14 @@ If you want to use MessengerProject **without internet**, via your phone's hotsp
 ```bash
 ip addr show wlan0
 # Look for "inet" under wlan0 (e.g., 192.168.43.101)
+---
+👨‍💻 Author
+
+N R Nazir
+
+---
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
+---
