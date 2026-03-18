@@ -34,6 +34,46 @@ pip install -r requirements.txt
 python server.py
 ```
 ---
+### chack ip
+```bash
+ip a
+# brouser search http://YOUR_IP:5000
+```
+---
+### Full code for kali installation 
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3 python3-pip git
+git clone https://github.com/nr-nazir-islam/Hotspot-message.git
+cd Hotspot-message
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+python3 server.py
+```
+---
+### Chack ip
+```bash
+ip a
+# brouser search http://YOUR_IP:5000
+```
+---
+### Full code for Ubuntu installation
+```bash
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y python3 python3-pip git
+git clone https://github.com/nr-nazir-islam/Hotspot-message.git
+cd Hotspot-message
+pip3 install --upgrade pip
+pip3 install -r requirements.txt
+python3 server.py
+```
+---
+### chack ip
+```bash
+ip a
+# brouser search http://YOUR_IP:5000
+```
+---
 
 📱 Termux Installation (Step-by-Step-method)
 ---
@@ -56,7 +96,8 @@ cd Hotspot-message
 
 pip install --upgrade pip
 ---
-pip install -r requirements.txt
+pip install -r r
+equirements.txt
 
 ---
 
