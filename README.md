@@ -1,4 +1,4 @@
-💬 Messenger Project (Termux Supported)
+💬 Messenger Project (Termux + ofline hotspot Supported)
 
 A simple real-time chat application built with Flask + Socket.IO.
 This project can run easily in Termux (Android) or any Linux system.
