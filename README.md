@@ -22,10 +22,20 @@ Make sure you have:
 - Python (3.10+ recommended)
 - Git
 - Internet connection
-
+---
+### Full code for termux installation 
+```bash
+pkg update -y && pkg upgrade -y
+pkg install -y python git
+git clone https://github.com/nr-nazir-islam/Hotspot-message.git
+cd Hotspot-message
+pip install --upgrade pip
+pip install -r requirements.txt
+python server.py
+```
 ---
 
-📱 Termux Installation (Step-by-Step)
+📱 Termux Installation (Step-by-Step-method)
 ---
 1️⃣ Install required packages
 
