@@ -100,7 +100,14 @@ If you want to use MessengerProject **without internet**, via your phone's hotsp
 
 ### 2️⃣ Connect your device
 - Make sure your Termux device (or other device) is connected to the hotspot
-----
+---
+
+### 3️⃣ Find your local IP  
+```bash
+ip addr show wlan0
+# Look for "inet" under wlan0 (e.g., 192.168.43.101)
+```
+---
 👨‍💻 Author
 
 N R Nazir
@@ -110,11 +117,3 @@ N R Nazir
 ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
----
-
-### 3️⃣ Find your local IP  
-```bash
-ip addr show wlan0
-# Look for "inet" under wlan0 (e.g., 192.168.43.101)
----
-b
