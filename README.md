@@ -112,7 +112,9 @@ N R Nazir
 If you like this project, give it a ⭐ on GitHub!
 ---
 
-### 3️⃣ Find your local IP
+### 3️⃣ Find your local IP  
 ```bash
 ip addr show wlan0
 # Look for "inet" under wlan0 (e.g., 192.168.43.101)
+---
+b
