@@ -22,6 +22,7 @@ Make sure you have:
 - Python (3.10+ recommended)
 - Git
 - Internet connection
+- or hotspot connected to the other device offline supported
 ---
 ### Full code for termux installation 
 ```bash
