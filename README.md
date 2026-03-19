@@ -112,8 +112,7 @@ python server.py
 5️⃣ Open in browser
 
 Go to:
-
-http://127.0.0.1:5000
+http://YOUR_IP:5000
 
 ---
 
