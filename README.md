@@ -12,6 +12,7 @@ This project can run easily in Termux (Android) or any Linux system.
 - ⚡ Socket.IO Communication
 - 🗄️ SQLite Database (chat.db)
 - 🎨 Simple Chat UI
+- offline supported
 
 ---
 
