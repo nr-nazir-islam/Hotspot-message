@@ -160,6 +160,16 @@ ip addr show wlan0
 # Look for "inet" under wlan0 (e.g., 192.168.43.101)
 ```
 ---
+### How to run it
+-first
+-run command $ ip a
+-example your ip is:10.30.17.89
+-run $ python3 server.py
+-search web http:your-ip:5000
+-example
+-web search:http://10.30.17.89:5000
+-with other device
+---
 👨‍💻 Author
 
 N R Nazir
